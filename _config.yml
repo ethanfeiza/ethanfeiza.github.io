@@ -85,7 +85,7 @@ analytics:
 # Site Author
 author:
   name             : "Ethan Feiza"
-  avatar           : "/images/Headshot 1.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/Headshot 2.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Business Intelligence Analyst | Express 4x4 Truck Rental"
   location         : "Greater Chicago Area, IL"
   email            : "ethanfeiza@gmail.com"
