@@ -8,6 +8,12 @@ header:
 I am a Marketing Systems Analyst at Packaging Corporation of America. PCA is the third largest producer of containerboard and corrugated products in North America. I work with our Strategic Insights Team to analyze survey data from our Employee & Customer Engagement surveys. We share the results of our analyses internally with plant management and sales teams across our network to enhance customer experience and optimize plant operations. Additionally, I develop Power BI dashboards to summarize the business performance of various national accounts.
 -->
 
-I have a bachelor's degree in mathematics with a concentration in statistics from the University of North Carolina at Charlotte. My passion lies in leveraging statistical analysis and visualization to uncover data patterns and identify opportunities for improvement. As an undergraduate, I actively pursued independent research opportunities with professors to explore topics beyond the scope of my coursework. These areas included regression analysis, time series analysis, k-means clustering, and significance testing. I served as the 2021-2022 President of the Mathematics Club at UNC Charlotte. I also tutored for a course in deterministic modeling during my spring semester of 2023.
+I am a Business Intelligence Analyst at Express 4x4 Truck Rental for Sasser Family Companies.
 
-Technichal Skills: Python, Tableau, Power BI, SQL, R
+I design and deploy enterprise Power BI dashboards that drive data accessibility, visibility, and adoption across the organization. I translate operational and financial data into clear reporting frameworks that support executive decision-making and day-to-day performance management.
+
+I develop and maintain predictive models in Python to forecast asset performance, vehicle value retention, and revenue trends. My work integrates internal operational data with external market indicators to inform underwriting, fleet strategy, and long-term capital planning.
+
+I build analytical tools that evaluate customer behavior, optimize pricing strategies, and identify new revenue opportunities. I also architect scalable data models and forecasting systems that align procurement, inventory, and financial planning.
+
+Technical toolkit: Python, SQL, DAX, R, Git, Power BI.
