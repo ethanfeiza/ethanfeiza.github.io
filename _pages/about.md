@@ -14,6 +14,4 @@ I design and deploy enterprise Power BI dashboards that drive data accessibility
 
 I develop and maintain predictive models in Python to forecast asset performance, vehicle value retention, and revenue trends. My work integrates internal operational data with external market indicators to inform underwriting, fleet strategy, and long-term capital planning.
 
-I build analytical tools that evaluate customer behavior, optimize pricing strategies, and identify new revenue opportunities. I also architect scalable data models and forecasting systems that align procurement, inventory, and financial planning.
-
 Technical toolkit: Python, SQL, DAX, R, Git, Power BI.
