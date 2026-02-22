@@ -399,12 +399,12 @@ Let’s consider one last scenario. Say we run an advertisement on the category 
 $$
 p(a \mid b) = \frac{p(a \text{ and } b)}{p(b)}
 $$
-
+<br>
 $$
 p(\text{category} \mid \text{checkout}) 
 = \frac{p(\text{category and eventually checkout})}{p(\text{eventual checkout})}
 $$
-
+<br>
 $$
 p(\text{category} \mid \text{checkout}) 
 \approx \frac{N[\text{home}, \text{category}] \cdot B[\text{category}, \text{checkout}]}{B[\text{home}, \text{checkout}]}
