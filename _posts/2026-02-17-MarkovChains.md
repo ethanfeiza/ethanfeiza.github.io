@@ -400,14 +400,14 @@ $$
 p(a \mid b) = \frac{p(a \text{ and } b)}{p(b)}
 $$
 
-<div style="margin-top:1em;"></div>
+<div style="margin-top:2em;"></div>
 
 $$
 p(\text{category} \mid \text{checkout}) 
 = \frac{p(\text{category and eventually checkout})}{p(\text{eventual checkout})}
 $$
 
-<div style="margin-top:1em;"></div>
+<div style="margin-top:2em;"></div>
 
 $$
 p(\text{category} \mid \text{checkout}) 
