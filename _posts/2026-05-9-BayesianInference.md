@@ -43,4 +43,4 @@ $$
 $$
 
 
-
+Where θ is the unknown parameter we want to learn (the true relief rate for a particular treatment) and X is the observed data (the recorded outcomes of relieved and not relieved from real patient sessions).
