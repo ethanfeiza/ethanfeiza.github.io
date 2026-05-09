@@ -47,6 +47,8 @@ Where θ is the unknown parameter we want to learn (the true relief rate for a p
 
 Next, we need to define a few new terms:
 
+<div style="width: fit-content;">
+
 | Term | Name | Definition |
 |------|------|---------------|
 | $$P(\theta)$$ | Prior | Our belief about θ before seeing any data |
@@ -54,20 +56,6 @@ Next, we need to define a few new terms:
 | $$P(\theta \mid X)$$ | Posterior | Our updated belief about θ after seeing the data |
 | $$P(X)$$ | Marginal Likelihood | A normalizing constant that ensures the posterior is a valid distribution |
 
-<div style="max-width: 600px;">
-<table>
-  <thead>
-    <tr>
-      <th>Term</th>
-      <th>Name</th>
-      <th>Definition</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>P(θ)</td><td>Prior</td><td>Our belief about θ before seeing any data</td></tr>
-    <tr><td>P(X | θ)</td><td>Likelihood</td><td>How probable is this data, given a particular value of θ?</td></tr>
-    <tr><td>P(θ | X)</td><td>Posterior</td><td>Our updated belief about θ after seeing the data</td></tr>
-    <tr><td>P(X)</td><td>Marginal Likelihood</td><td>A normalizing constant that ensures the posterior is a valid distribution</td></tr>
-  </tbody>
-</table>
 </div>
+
+
