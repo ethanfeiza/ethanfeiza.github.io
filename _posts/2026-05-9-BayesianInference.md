@@ -35,4 +35,12 @@ $$
 $$
 
 
+In our experiment, we’re not talking about abstract events A and B. We care about parameters and data. Let’s rewrite this formula as:
+
+
+$$
+\small P(\theta \mid X) = \frac{P(X \mid \theta) \cdot P(\theta)}{P(X)}
+$$
+
+
 
