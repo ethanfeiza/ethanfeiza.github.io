@@ -47,7 +47,7 @@ Where θ is the unknown parameter we want to learn (the true relief rate for a p
 
 Next, we need to define a few new terms:
 
-| Term | Name | Plain English |
+| Term | Name | Definition |
 |------|------|---------------|
 | $$P(\theta)$$ | Prior | Our belief about θ before seeing any data |
 | $$P(X \mid \theta)$$ | Likelihood | How probable is this data, given a particular value of θ? |
