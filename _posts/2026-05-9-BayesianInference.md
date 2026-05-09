@@ -44,3 +44,12 @@ $$
 
 
 Where θ is the unknown parameter we want to learn (the true relief rate for a particular treatment) and X is the observed data (the recorded outcomes of relieved and not relieved from real patient sessions).
+
+Next, we need to define a few new terms:
+
+| Term | Name | Plain English |
+|------|------|---------------|
+| $$P(\theta)$$ | Prior | Our belief about θ before seeing any data |
+| $$P(X \mid \theta)$$ | Likelihood | How probable is this data, given a particular value of θ? |
+| $$P(\theta \mid X)$$ | Posterior | Our updated belief about θ after seeing the data |
+| $$P(X)$$ | Marginal Likelihood | A normalizing constant that ensures the posterior is a valid distribution |
