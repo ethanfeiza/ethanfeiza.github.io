@@ -22,4 +22,4 @@ Let’s say we decide a reasonable sample size for this experiment to be 500 pat
 
 After 100 sessions, treatment B has a relief rate of 68% and treatment A has a relief rate of 61%. Is treatment B truly better yet? If we’re playing by the frequentist rules, we’re in a tough spot. We’ve been monitoring the number of collected sessions, but we still haven’t reached our pre-defined sample size of 500 (and frankly, we're questioning whether 100 independent patient sessions could have been a sufficient sample size to begin with). At this point, the p-value still cannot tell us: Given the data, how confident should we be that treatment B is genuinely better? Lucky for us, Bayesian inference can help us answer this question.
 
-**What is Bayesian Statistics?**
+## What is Bayesian Statistics?
