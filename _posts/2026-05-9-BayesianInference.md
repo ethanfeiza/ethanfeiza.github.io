@@ -30,6 +30,6 @@ Let’s revisit the coin flip for a moment. Under frequentist thinking, we flip 
 We’ll use this same approach now for the clinical drug experiment. Instead of asking whether the relief rate of treatment B is significantly different than treatment A at some fixed sample size, we’ll construct a distribution of beliefs around both treatments’ true relief rates, updating both in real time as patient sessions are recorded. To understand how that updating works, we need Bayes' Theorem. Let’s recall our favorite conditional probability formula:
 
 $$
-P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}
+\small P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}
 $$
 
