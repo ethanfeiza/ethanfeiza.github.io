@@ -135,7 +135,7 @@ Equivalent to observing 13 relieved outcomes from 20 sessions. Soft belief that 
 Equivalent to 204 relieved outcomes from 300 sessions. High confidence that treatment B's relief rate is near 68%. <br>
 <br>
 
-Now, here's where the math gets exciting. If we pair the right prior $P(\theta)$ with the right likelihood $P(X \mid \theta)$, the posterior comes out as the same family of distributions as the prior. This is called conjugacy, and it's what makes our update rule clean enough to derive by hand. In the clinical drug experiment, our likelihood comes from a binomial distribution (relieved or not relieved being the binary outcome) and the prior comes from a $\text{Beta}(\alpha, \beta)$ distribution (defined on the closed $[0,1]$ interval for probability). Together, they form a Beta-Binomial conjugate pair, which can be used to update the prior.
+Now, here's where the math gets exciting. If we pair the right prior $P(\theta)$ with the right likelihood $P(X \mid \theta)$, the posterior comes out as the same family of distributions as the prior. This is called **Conjugacy**, and it's what makes our update rule clean enough to derive by hand. In the clinical drug experiment, our likelihood comes from a binomial distribution (relieved or not relieved being the binary outcome) and the prior comes from a $\text{Beta}(\alpha, \beta)$ distribution (defined on the closed $[0,1]$ interval for probability). Together, they form a Beta-Binomial conjugate pair, which can be used to update the prior.
 
 Let’s break down how this works. Consider the likelihood $P(X \mid \theta)$. If we observe n patient sessions for a particular treatment with k successful relief outcomes, the likelihood of this data given a particular value of θ is:
 
@@ -147,12 +147,20 @@ This is the Binomial distribution. It answers the question of how probable it is
 
 $$\small P(X \mid \theta) \propto \theta^k (1-\theta)^{n-k}$$
 
-To determine the Posterior $P(theta \mid \X)$, we must multiply the likelihood above with our Beta prior. Recall this prior has the form:
+To determine the Posterior $P(theta \mid X)$, we must multiply the likelihood above with our Beta prior. Recall this prior takes the form:
 
 $$\small P(\theta) \propto \theta^{\alpha-1}(1-\theta)^{\beta-1}$$
 
 Multiplying likelihood by prior:
 
 $$\small P(\theta \mid X) \propto \theta^k(1-\theta)^{n-k} \cdot \theta^{\alpha-1}(1-\theta)^{\beta-1}$$
+
+Collecting exponents:
+
+$$\small P(\theta \mid X) \propto \theta^{\alpha+k-1}(1-\theta)^{\beta+n-k-1}$$
+
+Upon simplifying, this looks exactly like our Beta distribution, just with updated parameters:
+
+$$\small P(\theta \mid X) = \text{Beta}(\alpha + k, \ \beta + n - k)$$
 
 
