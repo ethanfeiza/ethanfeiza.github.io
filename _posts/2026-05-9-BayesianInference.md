@@ -123,25 +123,36 @@ Where $\text{Beta}(\alpha, \beta)$ is the normalizing constant ensuring the dist
 Here are some examples of a prior $\text{Beta}(\alpha, \beta)$ distribution for the relief rate of treatment B. The peak location is always $\alpha/(\alpha+\beta)$. The width tells us how much volatility is behind that belief.
 
 **Beta(1, 1) — An uninformative prior** <br>
-<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(1,1).png" width="40%"> <br>
+<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(1,1).png" width="35%"> <br>
 This is a completely flat distribution. Every possible relief rate from 0 to 1 is equally likely. We're essentially expressing no prior belief about what to expect. <br>
 <br>
 **Beta(13, 7) — A weak prior belief** <br>
-<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(13,7).png" width="40%"> <br>
+<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(13,7).png" width="35%"> <br>
 Equivalent to observing 13 relieved outcomes from 20 sessions. Soft belief that treatment B's relief rate is around 65%. <br>
 <br>
 **Beta(204, 96) — A strong prior belief** <br>
-<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(204,96).png" width="40%"> <br>
+<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(204,96).png" width="35%"> <br>
 Equivalent to 204 relieved outcomes from 300 sessions. High confidence that treatment B's relief rate is near 68%. <br>
 <br>
 
 Now, here's where the math gets exciting. If we pair the right prior $P(\theta)$ with the right likelihood $P(X \mid \theta)$, the posterior comes out as the same family of distributions as the prior. This is called conjugacy, and it's what makes our update rule clean enough to derive by hand. In the clinical drug experiment, our likelihood comes from a binomial distribution (relieved or not relieved being the binary outcome) and the prior comes from a $\text{Beta}(\alpha, \beta)$ distribution (defined on the closed $[0,1]$ interval for probability). Together, they form a Beta-Binomial conjugate pair, which can be used to update the prior.
 
-Let’s break down how this works. Consider the likelihood P(X|θ). If we observe n patient sessions for a particular treatment with k successful relief outcomes, the likelihood of this data given a particular value of θ is:
+Let’s break down how this works. Consider the likelihood $P(X \mid \theta)$. If we observe n patient sessions for a particular treatment with k successful relief outcomes, the likelihood of this data given a particular value of θ is:
 
 $$
 \small P(X \mid \theta) = \binom{n}{k} \theta^k (1-\theta)^{n-k}
 $$
 
 This is the Binomial distribution. It answers the question of how probable it is to observe exactly $k$ relief outcomes from $n$ sessions, given a true relief rate of $\theta$. Notice that $\binom{n}{k}$, the binomial coefficient, is only a constant with no dependence on $\theta$. Just like $P(X)$ in Bayes' theorem, we can drop it when reasoning about the shape of the posterior. So, the likelihood simplifies to:
+
+$$\small P(X \mid \theta) \propto \theta^k (1-\theta)^{n-k}$$
+
+To determine the Posterior $P(theta \mid \X)$, we must multiply the likelihood above with our Beta prior. Recall this prior has the form:
+
+$$\small P(\theta) \propto \theta^{\alpha-1}(1-\theta)^{\beta-1}$$
+
+Multiplying likelihood by prior:
+
+$$\small P(\theta \mid X) \propto \theta^k(1-\theta)^{n-k} \cdot \theta^{\alpha-1}(1-\theta)^{\beta-1}$$
+
 
