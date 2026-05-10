@@ -74,9 +74,9 @@ _Consider a disease that affects 1% of the population. A diagnostic test for thi
 
 Here's how we go about answering this question using the formulas above.
 
-$$\small P(\theta) = 0.01 \quad \text{(prior: 1 in 100 people have the disease)}$$
+$$\small \hspace{-8cm} P(\theta) = 0.01 \quad \text{(prior: 1\% of the population has the disease)}$$
 
-$$\small P(X \mid \theta) = 0.95 \quad \text{(likelihood: test returns positive 95% of the time given disease is present)}$$
+$$\small \hspace{-8cm} P(X \mid \theta) = 0.95 \quad \text{(likelihood: test returns positive 95\% of the time given disease is present)}$$
 
 Expanding $P(X)$ using the law of total probability:
 
