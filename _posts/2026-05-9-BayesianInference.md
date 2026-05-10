@@ -219,5 +219,5 @@ $$\small \mathcal{L}(\text{promote A}) = E[\max(\theta_B - \theta_A, 0)]$$
 
 We promote Treatment B when the expected loss falls below some acceptable threshold ε:
 
-\mathcal{L}(\text{promote B}) < \varepsilon
+$$\small \mathcal{L}(\text{promote B}) < \varepsilon$$
 
