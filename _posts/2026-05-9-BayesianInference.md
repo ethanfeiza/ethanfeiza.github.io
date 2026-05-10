@@ -94,4 +94,6 @@ $$
 
 Drumroll...
 
-
+$$
+\small P(\theta \mid X) = \frac{0.95 \times 0.01}{0.059} \approx 0.161
+$$
