@@ -163,4 +163,16 @@ Upon simplifying, this looks exactly like our Beta distribution, just with updat
 
 $$\small P(\theta \mid X) = \text{Beta}(\alpha + k, \ \beta + n - k)$$
 
+That's the entire update rule! For a specific treatment in the experiment, our prior was $\text{Beta}(\alpha, \beta)$. We observe $k$ relieved outcomes from $n$ sessions for that treatment. So, our final posterior is $\text{Beta}(\alpha + k, \ \beta + n - k)$.
 
+Here's an example of how our belief in the true relief rate of treatment B can change as we accumulate data and update our prior with the latest posterior.
+
+| Sessions | Relieved Patients | Non-Relieved Patients | Posterior | Distribution Mean |
+|----------|-------------------|----------------------|-----------|-------------------|
+| 0 | 0 | 0 | $\text{Beta}(1, 1)$ | 0.500 |
+| 10 | 7 | 3 | $\text{Beta}(8, 4)$ | 0.667 |
+| 50 | 34 | 16 | $\text{Beta}(35, 17)$ | 0.673 |
+| 100 | 68 | 32 | $\text{Beta}(69, 33)$ | 0.676 |
+| 500 | 340 | 160 | $\text{Beta}(341, 161)$ | 0.680 |
+
+Notice the mean of the posterior converges to the true relief rate as we accumulate more patient sessions. Each row's posterior becomes the prior for the next update. The first prior's influence pulling the mean towards 0.5 fades quickly as real data accumulates — by session 500, the data has taken over entirely. In the clinical drug experiment, we run this update simultaneously for both treatments, maintaining $\text{Beta}(\alpha_A, \beta_A)$ and $\text{Beta}(\alpha_B, \beta_B)$ in parallel. Every session that arrives updates one of the two distributions depending on which treatment was prescribed. We are never forced to wait for a pre-defined sample size, and the posteriors simply reflect whatever evidence we've seen so far.
