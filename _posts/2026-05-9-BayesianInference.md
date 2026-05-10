@@ -179,3 +179,28 @@ Notice the mean of the posterior converges to the true relief rate as we accumul
 
 ## Making Decisions Under Uncertainty 
 
+At any point in the clinical drug trial, we’ll have two posterior distributions.
+
+$\text{Beta}(\alpha_A, \beta_A)$ for treatment A.
+$\text{Beta}(\alpha_B, \beta_B)$ for treatment B.
+
+Either distribution represents our full belief about that treatment's true relief rate at that point in the experiment. However, these distributions aren't enough to guide decisions yet. When a stakeholder asks if treatment B is truly better than treatment A, we must answer two questions first.
+
+- Given the latest data, how likely is it that treatment B is truly better than A?
+- What would a wrong decision in the experiment cost us?
+
+To answer question 1… <br>
+A Frequentist 95% confidence interval built around an estimated relief rate won't tell us there's a 95% probability the true rate lives inside it. It means that across many repeated experiments, 95% of the constructed intervals would contain the true rate. The true relief rate is always fixed in this lens. A specific confidence interval has it or it doesn't, and frequentist statistics doesn't allow us to assign a probability to that.
+A Bayesian 95% credible interval is exactly what it sounds like. Given the data observed, there is a 95% probability that the true relief rate lies within this range. In the clinical drug trial, by the time treatment B's posterior is Beta(341,161), we can hand a stakeholder a credible interval and say with confidence exactly where the true relief rate most likely falls.
+With two independent Beta posterior distributions, we want to know how often a sample drawn from B's posterior would exceed a sample drawn from A's posterior. This can be denoted:
+
+$$\small P(\theta_B > \theta_A)$$
+
+Analytically, this is computed by integrating over all possible values of θ_A​ and θ_B​:
+
+$$\small P(\theta_B > \theta_A) = \int_0^1 \int_{\theta_A}^1 f(\theta_B) f(\theta_A) \, d\theta_B \, d\theta_A$$
+
+The double integral may look intimidating, but the intuition is straightforward. If treatment B's posterior is almost entirely to the right of treatment A's on the relief rate axis, P(B>A) approaches 1. If the two distributions heavily overlap, P(B>A) hovers near 0.5, meaning the data hasn't separated them yet. P(B>A) is useful, but it is not quite the right number to make a final decision on.
+
+To answer question 2… <br>
+P(B>A) = 0.95 might sound compelling, but what if treatment B is only 0.1% better than treatment A in the scenarios where it wins and 5% worse in the scenarios where it loses? Calling treatment B better might still be the wrong call. This is where expected loss comes in. What is the average cost of making the wrong decision?
