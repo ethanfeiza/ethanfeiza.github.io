@@ -57,18 +57,7 @@ Next, we need to define a few new terms:
 
 The posterior is always what we're after. It reflects our updated belief about θ given everything observed so far.
 
-A side note on the likelihood P(X)
-Notice P(X) sits in the denominator of the formula above. Its only job is to ensure the posterior sums to 1 across all possible values of θ. It has no dependence on θ and is a constant regardless of the parameter value we're evaluating. Since we'll be focused on identifying the shape of the posterior distribution, a constant that scales everything uniformly doesn't meaningfully change anything. We can drop the denominator and write:
-
-
-$$
-\small P(\theta \mid X) \propto P(X \mid \theta) \cdot P(\theta)
-$$
-
-<p style="text-align: center; font-size: 0.85em;">Where ∝ means "proportional to"</p>
-
-
-Again, the shape of the posterior is determined entirely by the numerator, so we'll refer to this formula from here on out. Let's put this knowledge to the test with a famous example in Bayesian probability.
+Let's put this knowledge to the test with a famous example in Bayesian probability.
 
 _Consider a disease that affects 1% of the population. A diagnostic test for this disease is 95% accurate: if you have the disease, the test returns positive 95% of the time. If you don’t have the disease, the test returns negative 95% of the time (a 5% false positive rate). You test positive. What is the probability you actually have the disease?_
 
@@ -97,3 +86,20 @@ Drumroll...
 $$
 \small P(\theta \mid X) = \frac{0.95 \times 0.01}{0.059} \approx 0.161
 $$
+
+There’s actually only a 16% chance you have the disease despite a 95% accurate test. Many people (my initial self included) assume the answer is closer to 95%. The disease is so rare that false positives outnumber true positives across the full population. Our prior belief (only 1% of people have this disease) is powerful enough to override a test that is 95% accurate. Thus, the posterior is a balance between prior belief and observed evidence. If you were to test positive twice in a row, that posterior of 16% becomes your new prior going into the next update. Each result reshapes your belief, which becomes the starting point for the next posterior.
+
+We’ll now transition back to the clinical drug experiment.
+
+_A side note on the likelihood P(X)_
+Notice P(X) sits in the denominator of the formula above. Its only job is to ensure the posterior sums to 1 across all possible values of θ. It has no dependence on θ and is a constant regardless of the parameter value we're evaluating. Since we'll be focused on identifying the shape of the posterior distribution, a constant that scales everything uniformly doesn't meaningfully change anything. We can drop the denominator and write:
+
+
+$$
+\small P(\theta \mid X) \propto P(X \mid \theta) \cdot P(\theta)
+$$
+
+<p style="text-align: center; font-size: 0.85em;">Where ∝ means "proportional to"</p>
+
+
+Again, the shape of the posterior is determined entirely by the numerator, so we'll refer to this formula from here on out.
