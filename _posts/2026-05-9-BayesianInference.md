@@ -68,4 +68,18 @@ $$
 <p style="text-align: center; font-size: 0.85em;">Where ∝ means "proportional to"</p>
 
 
-Again, the shape of the posterior is determined entirely by the numerator, so we'll refer to this formula from here on out.
+Again, the shape of the posterior is determined entirely by the numerator, so we'll refer to this formula from here on out. Let's put this knowledge to the test with a famous example in Bayesian probability.
+
+_Consider a disease that affects 1% of the population. A diagnostic test for this disease is 95% accurate: if you have the disease, the test returns positive 95% of the time. If you don’t have the disease, the test returns negative 95% of the time (a 5% false positive rate). You test positive. What is the probability you actually have the disease?_
+
+Here’s how we go about answering this question using the formulas above.
+
+P(θ) = 0.01 (prior: 1% of the population has the disease)
+P(X∣θ) = 0.95  (likelihood: the test returns positive 95% of the time given the disease is present)
+P(X) (expand this using the law of total probability…)
+= P(X∣θ)P(θ)+P(X∣¬θ)P(¬θ) 
+= (0.95)(0.01)+(0.05)(0.99)=0.0095+0.0495=0.059
+
+Drumroll…
+
+
