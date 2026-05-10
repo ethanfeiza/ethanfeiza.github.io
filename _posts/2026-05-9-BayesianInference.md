@@ -217,7 +217,13 @@ Similarly, if we were to promote treatment A:
 
 $$\small \mathcal{L}(\text{promote A}) = E[\max(\theta_B - \theta_A, 0)]$$
 
-We promote Treatment B when the expected loss falls below some acceptable threshold ε:
+We would only decide to promote Treatment B if the expected loss falls below some acceptable threshold ε:
 
 $$\small \mathcal{L}(\text{promote B}) < \varepsilon$$
+
+_For simplicity, we use a shared threshold ε since treatment A is already the incumbent treatment. We could technically introduce a separate ε for promoting an alternative depending on the experiment._
+
+Remember that **Frequentist** A/B testing should never allow early stopping in an experiment. The moment we break our commitment to the sample size, our false positive rate inflates and the results become unreliable. Under a **Bayesian** A/B test, we can stop as soon as the expected loss drops below ε. Whether it takes 100 or 1,000 sessions in the clinical drug experiment, the data will tell us once we've collected enough of it.
+
+
 
