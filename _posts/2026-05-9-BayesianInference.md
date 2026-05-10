@@ -68,4 +68,4 @@ $$
 <p style="text-align: center; font-size: 0.85em;">Where ∝ means "proportional to"</p>
 
 
-Again, the shape of the posterior is determined entirely by the numerator, so we will refer to this formula from here on out.
+Again, the shape of the posterior is determined entirely by the numerator, so we'll refer to this formula from here on out.
