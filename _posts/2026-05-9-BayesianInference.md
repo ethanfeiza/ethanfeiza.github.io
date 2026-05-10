@@ -225,5 +225,5 @@ _For simplicity, we use a shared threshold ε since treatment A is already the i
 
 Remember that **Frequentist** A/B testing should never allow early stopping in an experiment. The moment we break our commitment to the sample size, our false positive rate inflates and the results become unreliable. Under a **Bayesian** A/B test, we can stop as soon as the expected loss drops below ε. Whether it takes 100 or 1,000 sessions in the clinical drug experiment, the data will tell us once we've collected enough of it.
 
-
-
+## Tying It All Together with One Final Example
+Let's walk through one final example examining the differences between Frequentist and Bayesian A/B testing in practice. Imagine you're a data scientist working for a video streaming platform. The platform uses a recommendation model to surface new content to viewers as soon as they finish watching a video, movie, or show. You've been developing a new model and want to determine if it drives more clicks on recommended content than the current one.
