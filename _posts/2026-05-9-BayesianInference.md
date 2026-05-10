@@ -114,3 +114,8 @@ A Beta Distribution $\text{Beta}(\alpha, \beta)$ is a common probability distrib
 
 If we have no prior beliefs on the true relief rates of treatments A or B at the start of the A/B test, we can use the neutral $\text{Beta}(1, 1)$ as the prior for both treatments. This is a flat, uninformative prior telling the model we have no strong belief about the effectiveness of either treatment before the experiment. After 500 sessions are collected for each treatment, each success and failure to relieve a headache would update the corresponding Beta posterior distributions (one for $\theta_A$, one for $\theta_B$). We’d then ask what the probability is that a sample drawn from B's posterior exceeds a sample drawn from A's posterior. The probability density function for the Beta distribution is:
 
+$$
+\small f(\theta \mid \alpha, \beta) = \frac{\theta^{\alpha-1}(1-\theta)^{\beta-1}}{B(\alpha, \beta)}
+$$
+
+Where $\text{Beta}(\alpha, \beta)$ is the normalizing constant ensuring the distribution integrates to 1 over [0,1]. This is analogous to P(X) in Bayes' theorem. When we plot the Beta distribution, θ sits on the x-axis. We’re never claiming we know θ. Instead, we're asking how likely each possible value of θ is given our current beliefs. We’ll take a look at a few of these plots below. Try thinking of them as pictures of uncertainty around the true value of θ.
