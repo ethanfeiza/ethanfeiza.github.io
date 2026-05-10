@@ -47,7 +47,6 @@ Where θ is the unknown parameter we want to learn (the true relief rate for a p
 
 Next, we need to define a few new terms:
 
-<div style="width: fit-content;">
 
 | Term | Name | Definition |
 |------|------|---------------|
@@ -56,6 +55,17 @@ Next, we need to define a few new terms:
 | $$P(\theta \mid X)$$ | Posterior | Our updated belief about θ after seeing the data |
 | $$P(X)$$ | Marginal Likelihood | A normalizing constant that ensures the posterior is a valid distribution |
 
-</div>
+The posterior is always what we're after. It reflects our updated belief about θ given everything observed so far.
+
+A side note on the likelihood P(X)
+Notice P(X) sits in the denominator of the formula above. Its only job is to ensure the posterior sums to 1 across all possible values of θ. It has no dependence on θ and is a constant regardless of the parameter value we're evaluating. Since we'll be focused on identifying the shape of the posterior distribution, a constant that scales everything uniformly doesn't meaningfully change anything. We can drop the denominator and write:
 
 
+$$
+\small P(\theta \mid X) \propto P(X \mid \theta) \cdot P(\theta)
+$$
+
+<p style="text-align: center; font-size: 0.85em;">Where ∝ means "proportional to"</p>
+
+
+Again, the shape of the posterior is determined entirely by the numerator, so we will refer to this formula from here on out.
