@@ -107,3 +107,5 @@ $$
 
 Again, the shape of the posterior is determined entirely by the numerator, so we'll refer to this formula from here on out.
 </div>
+
+Recall Frequentist probability views the true relief rate of treatment B as a fixed, unknown constant. We can only estimate this true relief rate by collecting data, running a test, and arriving at a single value like 68%. We can add a confidence interval around our estimate, but we’re ultimately left with a single estimate and a range. There's no formal way for us to say we believe the true rate is probably around 68% with a reasonable chance it's as high as 75%. We can’t update that estimate fluidly as new sessions arrive either. The Bayesian play is to represent θ (the true relief rate) as a probability distribution. Instead of committing to a single estimate, we capture a full distribution of our uncertainty across every possible value between 0 and 1. The mean of the distribution is where we think the true θ value most likely falls. The width of the distribution reflects how certain or uncertain we are. Whenever new data arrives and we update our prior, the entire distribution updates.
