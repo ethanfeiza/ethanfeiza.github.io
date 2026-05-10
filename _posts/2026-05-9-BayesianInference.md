@@ -123,13 +123,16 @@ Where $\text{Beta}(\alpha, \beta)$ is the normalizing constant ensuring the dist
 Here are some examples of a prior $\text{Beta}(\alpha, \beta)$ distribution for the relief rate of treatment B. The peak location is always $\alpha/(\alpha+\beta)$. The width tells us how much volatility is behind that belief.
 
 **Beta(1, 1) — An uninformative prior**
-![]({{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(1,1).png)
+<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(1,1).png" width="50%">
+
 This is a completely flat distribution. Every possible relief rate from 0 to 1 is equally likely. We're essentially expressing no prior belief about what to expect.
 
 **Beta(13, 7) — A weak prior belief**
-![]({{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(13,7).png)
+<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(13,7).png" width="50%">
+
 Equivalent to observing 13 relieved outcomes from 20 sessions. Soft belief that treatment B's relief rate is around 65%.
 
 **Beta(204, 96) — A strong prior belief**
-![]({{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(204,96).png)
+<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(204,96).png" width="50%">
+
 Equivalent to 204 relieved outcomes from 300 sessions. High confidence that treatment B's relief rate is near 68%.
