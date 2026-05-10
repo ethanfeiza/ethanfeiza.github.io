@@ -122,17 +122,17 @@ Where $\text{Beta}(\alpha, \beta)$ is the normalizing constant ensuring the dist
 
 Here are some examples of a prior $\text{Beta}(\alpha, \beta)$ distribution for the relief rate of treatment B. The peak location is always $\alpha/(\alpha+\beta)$. The width tells us how much volatility is behind that belief.
 
-**Beta(1, 1) — An uninformative prior**
-<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(1,1).png" width="50%">
+**Beta(1, 1) — An uninformative prior** <br>
+<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(1,1).png" width="20%"> <br>
+This is a completely flat distribution. Every possible relief rate from 0 to 1 is equally likely. We're essentially expressing no prior belief about what to expect. <br>
+<br>
+**Beta(13, 7) — A weak prior belief** <br>
+<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(13,7).png" width="20%"> <br>
+Equivalent to observing 13 relieved outcomes from 20 sessions. Soft belief that treatment B's relief rate is around 65%. <br>
+<br>
+**Beta(204, 96) — A strong prior belief** <br>
+<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(204,96).png" width="20%"> <br>
+Equivalent to 204 relieved outcomes from 300 sessions. High confidence that treatment B's relief rate is near 68%. <br>
+<br>
 
-This is a completely flat distribution. Every possible relief rate from 0 to 1 is equally likely. We're essentially expressing no prior belief about what to expect.
-
-**Beta(13, 7) — A weak prior belief**
-<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(13,7).png" width="50%">
-
-Equivalent to observing 13 relieved outcomes from 20 sessions. Soft belief that treatment B's relief rate is around 65%.
-
-**Beta(204, 96) — A strong prior belief**
-<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/Beta(204,96).png" width="50%">
-
-Equivalent to 204 relieved outcomes from 300 sessions. High confidence that treatment B's relief rate is near 68%.
+Now, here's where the math gets exciting. If we pair the right prior $P(\theta)$ with the right likelihood $P(X \mid \theta)$, the posterior comes out as the same family of distributions as the prior. This is called conjugacy, and it's what makes our update rule clean enough to derive by hand. In the clinical drug experiment, our likelihood comes from a binomial distribution (relieved or not relieved being the binary outcome) and the prior comes from a $\text{Beta}(\alpha, \beta)$ distribution (defined on the closed $[0,1]$ interval for probability). Together, they form a Beta-Binomial conjugate pair, which can be used to update the prior.
