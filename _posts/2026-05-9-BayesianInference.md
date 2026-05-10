@@ -119,3 +119,20 @@ $$
 $$
 
 Where $\text{Beta}(\alpha, \beta)$ is the normalizing constant ensuring the distribution integrates to 1 over [0,1]. This is analogous to P(X) in Bayes' theorem. When we plot the Beta distribution, θ sits on the x-axis. We’re never claiming we know θ. Instead, we're asking how likely each possible value of θ is given our current beliefs. We’ll take a look at a few of these plots below. Try thinking of them as pictures of uncertainty around the true value of θ.
+
+Here are some examples of a prior $\text{Beta}(\alpha, \beta)$ distribution for the relief rate of treatment B. The peak location is always $\alpha/(\alpha+\beta)$. The width tells us how much volatility is behind that belief.
+
+**Beta(1, 1) — An uninformative prior**
+
+...
+This is a completely flat distribution. Every possible relief rate from 0 to 1 is equally likely. We're essentially expressing no prior belief about what to expect.
+
+**Beta(13, 7) — A weak prior belief**
+
+...
+Equivalent to observing 13 relieved outcomes from 20 sessions. Soft belief that treatment B's relief rate is around 65%.
+
+**Beta(204, 96) — A strong prior belief**
+
+...
+Equivalent to 204 relieved outcomes from 300 sessions. High confidence that treatment B's relief rate is near 68%.
