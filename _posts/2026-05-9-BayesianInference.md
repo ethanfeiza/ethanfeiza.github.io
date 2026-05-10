@@ -176,3 +176,6 @@ Here's an example of how our belief in the true relief rate of treatment B can c
 | 500 | 340 | 160 | $\text{Beta}(341, 161)$ | 0.680 |
 
 Notice the mean of the posterior converges to the true relief rate as we accumulate more patient sessions. Each row's posterior becomes the prior for the next update. The first prior's influence pulling the mean towards 0.5 fades quickly as real data accumulates — by session 500, the data has taken over entirely. In the clinical drug experiment, we run this update simultaneously for both treatments, maintaining $\text{Beta}(\alpha_A, \beta_A)$ and $\text{Beta}(\alpha_B, \beta_B)$ in parallel. Every session that arrives updates one of the two distributions depending on which treatment was prescribed. We are never forced to wait for a pre-defined sample size, and the posteriors simply reflect whatever evidence we've seen so far.
+
+## Making Decisions Under Uncertainty 
+
