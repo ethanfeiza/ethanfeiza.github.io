@@ -226,4 +226,9 @@ _For simplicity, we use a shared threshold ε since treatment A is already the i
 Remember that **Frequentist** A/B testing should never allow early stopping in an experiment. The moment we break our commitment to the sample size, our false positive rate inflates and the results become unreliable. Under a **Bayesian** A/B test, we can stop as soon as the expected loss drops below ε. Whether it takes 100 or 1,000 sessions in the clinical drug experiment, the data will tell us once we've collected enough of it.
 
 ## Tying It All Together
-Let's close with one last scenario. Imagine you're a data scientist working for a video streaming platform. The platform uses a recommendation model to surface new content to viewers as soon as they finish watching a video, movie, or show. You've been developing a new model and want to determine if it drives more clicks on recommended content than the existing one.
+Let's close with one last scenario. Imagine you're a data scientist working for a video streaming platform. The platform recommends new content to viewers as soon as they finish watching a video. You've built a new recommendation model and want to know if it drives more clicks than the existing one.
+
+Model A is the existing model. It recommends content based on what similar viewers have watched. Model B is your new model. It factors in how long the viewer watched their last video and whether they've rewatched content before. Both models surface a ranked list of recommendations at the end of every video. The metric is simple enough. Did the viewer click on at least one recommended video?
+
+We'll simulate 500 viewer sessions for each model. The true click through rate (CTR) of Model A is predetermined at 25%. The CTR of Model B will be set at 28%. This is a modest lift, but it's reasonable in practice. A 3% difference is meaningful at scale, but not the kind of signal that reveals itself early in an experiment. That's what will make this an interesting test case.
+
