@@ -95,7 +95,7 @@ We’ll now transition back to the clinical drug experiment.
 
 <div style="background-color: #f5f5f5; border-left: 4px solid #ccc; padding: 12px 16px; margin: 16px 0;">
 <strong>A side note on the marginal likelihood P(X)</strong><br><br>
-Notice P(X) sits in the denominator of the formula above. Its only job is to ensure the posterior sums to 1 across all possible values of θ. It has no dependence on θ and is a constant regardless of the parameter value we're evaluating. Since we'll be focused on identifying the shape of the posterior distribution, a constant that scales everything uniformly doesn't meaningfully change anything. We can drop the denominator and write:
+Notice P(X) sits in the denominator of the posterior formula above. Its only job is to ensure the posterior sums to 1 across all possible values of θ. It has no dependence on θ and is a constant regardless of the parameter value we're evaluating. Since we'll be focused on identifying the shape of the posterior distribution, a constant that scales everything uniformly doesn't meaningfully change anything. We can drop the denominator and write:
 
 
 $$
