@@ -447,7 +447,8 @@ By session 169 in the Frequentist test, a p-value of 0.45 is nowhere near a 0.05
  
 The Bayesian framework reached a decision at that same session without violating a single assumption. It's worth noting again: $P(B > A)$ never crossed 0.95 across the entire experiment. The decision wasn't driven by confidence in the direction of the result. It came down to the expected cost of promoting the wrong model falling below what we were willing to accept. Here's how that played out across all 500 sessions.
  
-<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/simulation.png" width="100%">
+<img src="{{ site.url }}{{ site.baseurl }}/images/BayesianInference/simulation.png" width="70%">
+
 Plot 1 shows both posterior means converging toward the true CTR values over time. Increasing the number of viewer sessions from 500 to 1,000 would get us even closer to 0.25 and 0.28.
  
 In plot 2, $P(B > A)$ spends a long stretch below 0.5 early on. The data briefly favored Model A before enough evidence accumulated to separate the two models. You'll notice it never crosses 0.95, highlighting why expected loss is the better decision criterion.
