@@ -180,6 +180,7 @@ Either distribution represents our full belief about that treatment's true relie
  
 - Given the latest data, how likely is it that treatment B is truly better than A?
 - What would a wrong decision in the experiment cost us?
+- 
 **To answer question 1…** <br>
 <br>
 A Frequentist 95% confidence interval built around an estimated relief rate won't tell us there's a 95% probability the true rate lives inside it. It means that across many repeated experiments, 95% of the constructed intervals would contain the true rate. The true relief rate is always fixed in this lens. A specific confidence interval has it or it doesn't, and frequentist statistics doesn't allow us to assign a probability to that.
